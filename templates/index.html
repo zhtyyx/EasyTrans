@@ -17,6 +17,7 @@
         <ul class="layui-nav layui-layout-left">
             <li class="layui-nav-item"><a href="#">本站公告</a></li>
             <li class="layui-nav-item"><a href="#">建议</a></li>
+            <li class="layui-nav-item">联系方式:zhtyyx@gmail.com</li>
         </ul>
         {#        <ul class="layui-nav layui-layout-right">#}
         {#            <li class="layui-nav-item">#}
@@ -82,7 +83,7 @@
             </div>
             <div class="layui-col-md11">
                 <div class="layui-card">
-                    <div class="layui-card-header" style="font-size: larger">上传需要翻译的文件(当前仅限英译汉)</div>
+                    <div class="layui-card-header" style="font-size: larger">上传需要翻译的文件(当前仅限英译汉,且不支持OCR)</div>
                     <div class="layui-card-body">
                         <div class="layui-upload-drag" id="test-upload-drag">
                             <i class="layui-icon"></i>
@@ -161,7 +162,7 @@
             var flag = $("#trans_tools").val();
             var content = $("#text_area").val();
             if (content == '') {
-                layer.msg('请先输入要翻译的内容', {icon: 5});
+                layer.msg('请先输入要翻译的内容(英译汉)', {icon: 5});
             }
             else if (flag == 1) {//谷歌翻译
                 $.ajax({
