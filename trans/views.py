@@ -24,6 +24,9 @@ from django.http import StreamingHttpResponse
 def index(request):
     return render(request,'index.html')
 
+def photo_index(request):
+    return render(request, 'photo.html')
+
 #用于解决复制论文中的中文时的格式问题
 @csrf_exempt
 def content_correction(request):

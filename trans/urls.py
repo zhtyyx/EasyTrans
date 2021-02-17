@@ -16,6 +16,7 @@ from django.conf.urls import url
 from . import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^photo_index/$', views.photo_index, name='photo_index'),
     url(r'^google_trans/$', views.google_trans, name='google_trans'),
     url(r'^youdao_trans/$', views.youdao_trans, name='youdao_trans'),
     url(r'^bing_trans/$', views.bing_trans, name='bing_trans'),
