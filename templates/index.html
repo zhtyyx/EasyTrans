@@ -18,7 +18,7 @@
             <li class="layui-nav-item"><a href="http://zhtyyx.com/">论文翻译</a></li>
             <li class="layui-nav-item"><a href="
             photo_index">老照片修复</a></li>
-            <li class="layui-nav-item"><a href="#">联系方式:zhtyyx@gmail.com</a></li>
+            <li class="layui-nav-item"><a href="#">联系方式: zhtyyx@gmail.com</a></li>
         </ul>
         {#        <ul class="layui-nav layui-layout-right">#}
         {#            <li class="layui-nav-item">#}
@@ -274,6 +274,20 @@
                                         console.log(data.responseText);
                                         layer.close(translating);
                                         layer.alert('翻译失败，可能pdf翻译过程出了问题', {
+                                        skin: 'layui-layer-molv'
+                                        , closeBtn: 0
+                                    });
+                                    else if (flag == "remain"){
+                                        console.log(data.responseText);
+                                        layer.close(translating);
+                                        layer.alert('暂时只提供pdf文件翻译', {
+                                        skin: 'layui-layer-molv'
+                                        , closeBtn: 0
+                                    });
+                                    else if (flag == "oversize"){
+                                        console.log(data.responseText);
+                                        layer.close(translating);
+                                        layer.alert('文件大小超出15MB，如需翻译请联系我', {
                                         skin: 'layui-layer-molv'
                                         , closeBtn: 0
                                     });
